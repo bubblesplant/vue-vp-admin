@@ -48,8 +48,8 @@ export default defineConfig(({ mode }) => {
       createSvgIconsPlugin({
         // Specify the icon folder to be cached
         iconDirs: [path.resolve(__dirname, 'src/assets/icon')],
-        // Specify symbolId format
-        symbolId: 'icon-[dir]-[name]',
+        // Specify symbolId format（图标直接放 icon 根目录，所以不用 [dir] 前缀）
+        symbolId: 'icon-[name]',
       }),
       UnoCSS(),
       Inspect(),

@@ -1,0 +1,66 @@
+/**
+ * @file 路由过渡动画样式 ⭐⭐⭐
+ * -------------------------------------------------------
+ * <Transition name="fade"> 会自动在过渡的不同阶段给元素加这些类：
+ *
+ *   {name}-enter-from   进入的起点状态（第 1 帧）
+ *   {name}-enter-active 进入的整个过程（定义 transition 属性）
+ *   {name}-enter-to     进入的终点状态（默认状态，可省略）
+ *   {name}-leave-from   离开的起点状态（默认状态，可省略）
+ *   {name}-leave-active 离开的整个过程
+ *   {name}-leave-to     离开的终点状态
+ *
+ * 本项目路由切换动画：layout 里读取 route.meta.transition 决定用哪套。
+ */
+
+/* ===== 淡入淡出 fade ===== */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.25s ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+/* ===== 左滑入 slide-left ===== */
+.slide-left-enter-active,
+.slide-left-leave-active {
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+.slide-left-enter-from {
+  opacity: 0;
+  transform: translateX(24px);
+}
+.slide-left-leave-to {
+  opacity: 0;
+  transform: translateX(-24px);
+}
+
+/* ===== 右滑入 slide-right ===== */
+.slide-right-enter-active,
+.slide-right-leave-active {
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+.slide-right-enter-from {
+  opacity: 0;
+  transform: translateX(-24px);
+}
+.slide-right-leave-to {
+  opacity: 0;
+  transform: translateX(24px);
+}
+
+/* ===== 缩放 zoom ===== */
+.zoom-enter-active,
+.zoom-leave-active {
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+.zoom-enter-from {
+  opacity: 0;
+  transform: scale(0.95);
+}
+.zoom-leave-to {
+  opacity: 0;
+  transform: scale(1.05);
+}
