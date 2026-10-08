@@ -71,6 +71,12 @@ export const asyncRoutes: RouteRecordRaw[] = [
         meta: { title: 'component 动态渲染', keepAlive: true, transition: 'fade' },
       },
       {
+        path: 'async-component',
+        name: 'AsyncComponent',
+        component: () => import('@/views/feature/async-component.vue'),
+        meta: { title: 'defineAsyncComponent 异步组件', transition: 'fade' },
+      },
+      {
         path: 'define-component',
         name: 'DefineComponent',
         component: () => import('@/views/feature/define-component.vue'),

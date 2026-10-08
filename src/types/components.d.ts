@@ -11,6 +11,7 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    AAlert: typeof import('antdv-next')['Alert']
     AAvatar: typeof import('antdv-next')['Avatar']
     ABreadcrumb: typeof import('antdv-next')['Breadcrumb']
     ABreadcrumbItem: typeof import('antdv-next')['BreadcrumbItem']
@@ -27,9 +28,11 @@ declare module 'vue' {
     ALayoutHeader: typeof import('antdv-next')['LayoutHeader']
     ALayoutSider: typeof import('antdv-next')['LayoutSider']
     AMenu: typeof import('antdv-next')['Menu']
+    AModal: typeof import('antdv-next')['Modal']
     ARadioButton: typeof import('antdv-next')['RadioButton']
     ARadioGroup: typeof import('antdv-next')['RadioGroup']
     ASpace: typeof import('antdv-next')['Space']
+    ASwitch: typeof import('antdv-next')['Switch']
     ATable: typeof import('antdv-next')['Table']
     ATabPane: typeof import('antdv-next')['TabPane']
     ATabs: typeof import('antdv-next')['Tabs']
